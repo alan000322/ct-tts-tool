@@ -1,0 +1,16 @@
+/* src/assets/main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 可以使用 Tailwind CSS 或自行撰寫樣式 */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
