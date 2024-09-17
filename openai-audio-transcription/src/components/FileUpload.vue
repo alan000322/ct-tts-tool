@@ -10,7 +10,7 @@
                     <path d="M12 16V8m0 0L8 12m4-4l4 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         stroke="gray" />
                 </svg>
-                <span class="mt-2 text-sm text-gray-600">點擊或拖曳檔案至此</span>
+                <span class="mt-2 text-sm text-gray-600">點擊上傳檔案</span>
                 <input id="file-upload" type="file" accept="audio/*" @change="onFileChange" class="hidden" />
             </label>
         </div>

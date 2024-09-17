@@ -160,7 +160,7 @@
           loading.value = true;
           try {
             const prompt =
-              `你 重要的改稿編輯，當使用者給你任何文件，請不更改任何文件內容，僅更改使用者所提供給你的一些名詞資訊，加以替換、修改：\n${basis}\n，且若為半形空格「 」，請根據文意新增一些繁體中文的標點符號（「」，。、！？），此外適度的進行分段，其餘不做任何更正`;
+              `你 重要的改稿編輯，當使用者給你任何文件，請不要更改任何文件內容，尤其是專有名詞，僅依據以下guideline去做文字修正，但禁止任何幻想臆測，加以替換、修改：\n${basis}\n，且若為半形空格「 」，請根據文意新增一些繁體中文的標點符號（「」，。、！？），此外適度的進行分段，此外也要改正錯字，其餘不做任何更正`;
             const completionResponse = await axios.post(
               'https://api.openai.com/v1/chat/completions', {
                 model: 'gpt-4o-2024-08-06',
@@ -201,7 +201,7 @@
           }
           loading.value = true;
           try {
-            const prompt = `將使用者給你的逐字稿加以摘要，最終以正式文稿（像是新聞一樣的）輸出。其中也須符合使用者給訂的以下內容（可能包含專有名詞處理、錯別字、實體命名等）:\n\n${basis}`;
+            const prompt = `你 專業新聞編輯 將使用者給你的逐字稿加以摘要，最終以正式文稿（像是新聞一樣的）輸出，輸出前禁止任何幻想臆測，適度的進行分段、改正錯字。其中也須符合使用者給訂的以下內容（可能包含專有名詞處理、錯別字、實體命名等）:\n\n${basis}，不做幻想，繁體中文輸出`;
             const completionResponse = await axios.post(
               'https://api.openai.com/v1/chat/completions', {
                 model: 'gpt-4o-2024-08-06',
